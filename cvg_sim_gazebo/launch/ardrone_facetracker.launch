@@ -9,4 +9,7 @@
   <include file="$(find cvg_sim_gazebo)/launch/spawn_quadrotor.launch" >
     <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors.urdf.xacro"/> 
   </include>
+
+  <node name="spawn_elon_sdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-file $(find cvg_sim_gazebo)/models/elon/model.sdf -sdf -x 3 -y 0 -z 0 -Y -1.57 -model elon"/>
+  
 </launch>
