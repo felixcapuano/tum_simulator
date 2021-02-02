@@ -2,7 +2,7 @@
 <launch>
   <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find cvg_sim_gazebo)/worlds/ardrone_facetracker.world"/>
+    <arg name="world_name" value="$(find cvg_sim_gazebo)/worlds/ardrone_facetracker2.world"/>
   </include>
 
   <!-- Spawn simulated quadrotor uav -->
@@ -10,6 +10,4 @@
     <arg name="model" value="$(find cvg_sim_gazebo)/urdf/quadrotor_sensors.urdf.xacro"/> 
   </include>
 
-  <node name="spawn_elon_sdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" args="-file $(find cvg_sim_gazebo)/models/elon/model.sdf -sdf -x 3 -y 0 -z 0 -Y -1.57 -model elon"/>
-  
 </launch>
